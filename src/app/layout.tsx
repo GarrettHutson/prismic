@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Nunito, Nunito_Sans } from 'next/font/google'
 import clsx from 'clsx'
 import { createClient } from '@/prismicio'
-import  Header  from '@/components/Header'
+import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 const nunito = Nunito({
   subsets: ['latin'],
@@ -20,7 +20,7 @@ const nunito_sans = Nunito_Sans({
 export async function generateMetadata(): Promise<Metadata> {
 
   const client = createClient();
-const settings = await client.getSingle('settings');
+  const settings = await client.getSingle('settings');
   return {
     title: settings.data.site_title || "Fall Back",
     description: settings.data.meta_description || "Meta Back up Fall back",
@@ -41,7 +41,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        </body>
+      </body>
     </html>
   )
 }
