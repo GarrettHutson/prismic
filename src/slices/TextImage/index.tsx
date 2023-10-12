@@ -36,7 +36,7 @@ const TextImage = ({ slice }: TextImageProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       {slice.variation === "textLeft" && (
-        <div className="flex flex-col sm:flex-row justify-between items-center w-3/4 mx-auto">
+        <div className=" mx-auto flex w-3/4 flex-col items-center justify-between sm:flex-row">
           <div>
             <PrismicRichText
               field={slice.primary.heading}
@@ -49,15 +49,15 @@ const TextImage = ({ slice }: TextImageProps): JSX.Element => {
           </div>
           <PrismicNextImage
             field={slice.primary.image}
-            className="drop-shadow-xl w-1/2 md:w-xl max-w-4xl"
+            className="md:w-xl w-1/2 max-w-4xl drop-shadow-xl"
           />
         </div>
       )}
       {slice.variation === "textRight" && (
-        <div className="flex-col justify-between sm:flex-row flex  items-center w-3/4 mx-auto">
+        <div className="mx-auto  flex w-3/4  flex-col items-center justify-between sm:flex-row">
           <PrismicNextImage
             field={slice.primary.image}
-            className="hidden sm: drop-shadow-xl rounded-xl w-1/2 md:w-xl max-w-4xl"
+            className=" md:w-xl hidden w-1/2 max-w-4xl rounded-xl drop-shadow-xl"
           />
           <div className=" pl-4">
             <PrismicRichText
@@ -70,7 +70,7 @@ const TextImage = ({ slice }: TextImageProps): JSX.Element => {
             />
             <PrismicNextImage
               field={slice.primary.image}
-              className="sm:hidden drop-shadow-xl rounded-xl w-1/2 md:w-xl max-w-4xl"
+              className="md:w-xl w-1/2 max-w-4xl rounded-xl drop-shadow-xl sm:hidden"
             />
           </div>
         </div>
