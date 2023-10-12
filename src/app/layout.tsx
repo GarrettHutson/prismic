@@ -40,7 +40,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
-        <Footer />
+
         <div className="fixed bg-gradient-to-tr from-emerald-50 to-cyan-50 z-[-1] inset-0 opacity-50"></div>
         <PrismicPreview repositoryName={repositoryName} />
       </body>
