@@ -38,9 +38,9 @@ export default function RootLayout({
   return (
     <html className={clsx(nunito.variable, nunito_sans.variable)} lang="en">
       <body>
-        <Header />
         {children}
-
+        {/* @ts-expect-error Server Component */}
+        <Footer />
         <div className="fixed bg-gradient-to-tr from-emerald-50 to-cyan-50 z-[-1] inset-0 opacity-50"></div>
         <PrismicPreview repositoryName={repositoryName} />
       </body>
